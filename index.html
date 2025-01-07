@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Scolaire - ISJA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            margin: 0;
+            padding: 0;
+            color: #2d3436;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #34495E;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #F39C12;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Section */
+        section {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 900px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        section:before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: url('image-bulle.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        section h2 {
+            color: #2C3E50;
+            font-size: 2.4em;
+            margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #636e72;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Buttons */
+        button {
+            background: #2980B9;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #3498DB;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            margin-top: auto;
+            font-size: 1em;
+        }
+
+        /* Popup Styles */
+        .custom-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #2C3E50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .custom-popup .close-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #F39C12;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .custom-popup .close-btn:hover {
+            background: #e67e22;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul li a {
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            section p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue à l'Institution Sainte Jeanne D'Arc (ISJA)</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">À propos de nous</a></li>
+            <li><a href="#services">Nos Services</a></li>
+            <li><a href="#more">Plus d'infos</a></li>
+            <li><a href="#history">Histoire de l'ISJA</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>À propos de nous</h2>
+        <p>L'Institution Sainte Jeanne D'Arc (ISJA) est un établissement d'enseignement réputé, offrant une éducation de qualité à des élèves de tous âges. Nous mettons l'accent sur le développement intellectuel, moral et social de chaque étudiant.</p>
+        <p>Nous croyons que l'éducation va au-delà des salles de classe. Nos élèves sont encouragés à développer leurs compétences sociales et émotionnelles, en s'engageant dans des projets communautaires, des débats, et des activités de groupe qui favorisent un environnement d'apprentissage enrichissant. De plus, l'ISJA collabore avec diverses institutions académiques et culturelles pour offrir à nos étudiants un réseau d'opportunités uniques.</p>
+        <p>Notre mission est de former des individus conscients et responsables, prêts à relever les défis de demain. Nous nous efforçons de fournir une formation académique solide tout en favorisant une approche pédagogique moderne, axée sur la technologie et l'innovation. Grâce à des outils pédagogiques variés et une équipe d'enseignants passionnés, l'ISJA reste un pionnier dans l'enseignement.</p>
+        <p>Les élèves de l'ISJA participent activement à des projets d'apprentissage par la pratique, des sorties éducatives, et des partenariats avec des entreprises locales pour offrir une expérience d'apprentissage complète et diversifiée. Nous avons également des programmes d'échanges internationaux pour permettre à nos étudiants de découvrir d'autres cultures et d'élargir leur horizon.</p>
+        <button class="go-btn" onclick="window.location.href='https://3410004b.index-education.net/pronote/pageetablissement.html'">Visitez le site éducatif</button>
+    </section>
+
+    <section id="services">
+        <h2>Nos Services</h2>
+        <p>Nous proposons une gamme complète de services éducatifs et extrascolaires : ateliers d'arts, activités sportives, clubs de sciences, et plus encore. Chaque élève peut découvrir ses talents et développer ses compétences.</p>
+        <p>Nos ateliers sont conçus pour encourager la créativité des élèves, tandis que les activités sportives permettent à chacun de se maintenir en forme et de découvrir les bienfaits du travail en équipe. En outre, nos clubs de sciences offrent une plateforme idéale pour les passionnés de découvertes scientifiques. L'ISJA soutient également ses élèves dans leurs projets d'entrepreneuriat et de leadership.</p>
+        <p>Le soutien scolaire est également un aspect clé de notre offre de services. Nous avons mis en place des dispositifs pour aider nos élèves en difficulté à surmonter les obstacles académiques, avec un accompagnement personnalisé qui s'adapte à chaque besoin.</p>
+    </section>
+
+    <section id="more">
+        <h2>Plus d'infos</h2>
+        <p>À l'ISJA, nous utilisons des technologies modernes pour améliorer l'apprentissage de nos élèves. Nous avons des plateformes numériques pour suivre les progrès et collaborer efficacement.</p>
+        <p>Les technologies éducatives sont intégrées à notre programme d'enseignement afin de préparer les élèves aux défis du monde numérique. Nous croyons que l'innovation en matière de technologie joue un rôle crucial dans le développement des compétences des élèves et les prépare à l'avenir.</p>
+        <button onclick="showPopup()">Cliquez pour une surprise</button>
+    </section>
+
+    <section id="history">
+        <h2>Histoire de l'Institution Sainte Jeanne D'Arc (ISJA)</h2>
+        <p>L'Institution Sainte Jeanne D'Arc a été fondée il y a plus de 50 ans. Depuis sa création, elle s'efforce de créer une communauté d'apprentissage où chaque élève se sent soutenu et respecté.</p>
+        <p>Au fil des décennies, l'ISJA a évolué pour devenir l'une des institutions éducatives les plus respectées de la région. Elle a accueilli de nombreux élèves qui sont devenus des leaders dans divers secteurs grâce à l'éducation de qualité qu'ils ont reçue ici.</p>
+        <p>L'ISJA est un pilier de la communauté, participant activement à des initiatives locales et régionales pour promouvoir l'éducation, la culture et les valeurs de solidarité et d'inclusion.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Institution Sainte Jeanne D'Arc (ISJA). Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,190 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    margin: 0;
+    padding: 0;
+    color: #2d3436;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.8em;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre sur le titre */
+}
+
+/* Navigation */
+nav {
+    background-color: #34495E;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Ombre sur les liens de navigation */
+}
+
+nav ul li a:hover {
+    color: #F39C12;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Section */
+section {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+section:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: url('image-bulle.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+section h2 {
+    color: #2C3E50;
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Ombre sur les titres des sections */
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #636e72;
+    z-index: 1;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Ombre sur les paragraphes */
+}
+
+/* Buttons */
+button {
+    background: #2980B9;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Ombre sur les boutons */
+}
+
+button:hover {
+    background: #3498DB;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2C3E50;
+    color: white;
+    margin-top: auto;
+    font-size: 1em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Ombre sur le texte du pied de page */
+}
+
+/* Popup Styles */
+.custom-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2C3E50;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Ombre sur le texte de la popup */
+}
+
+.custom-popup .close-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #F39C12;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Ombre sur le bouton de fermeture */
+}
+
+.custom-popup .close-btn:hover {
+    background: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
+
